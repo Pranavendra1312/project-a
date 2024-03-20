@@ -8,14 +8,11 @@ const TeamAttendanceChart = () => {
   const [chartType, setChartType] = useState('column'); // State to track the selected chart type
   const [isLoading, setIsLoading] = useState(true); // State to track loading state
 
-  // Function to generate random values between 5 and 10
-  const generateRandomValue = () => Math.floor(Math.random() * 6) + 5;
-
   // Data series for the team attendance chart
   const teamAttendanceData = [
-    { name: 'Engineering', data: [40, 45, 50, generateRandomValue(), generateRandomValue()] }, // Monday, Tuesday, Wednesday, Thursday, Friday
-    { name: 'Analytics', data: [generateRandomValue(), 30, generateRandomValue(), 35, generateRandomValue()] }, // Monday, Tuesday, Wednesday, Thursday, Friday
-    { name: 'Wiq', data: [generateRandomValue(), generateRandomValue(), 50, generateRandomValue(), 45] } // Monday, Tuesday, Wednesday, Thursday, Friday
+    { name: 'Engineering', data: [40, 45, 50, 25, 30] }, // Monday, Tuesday, Wednesday, Thursday, Friday
+    { name: 'Analytics', data: [10, 30, 15, 35, 20] }, // Monday, Tuesday, Wednesday, Thursday, Friday
+    { name: 'Wiq', data: [15, 20, 50, 10, 45] } // Monday, Tuesday, Wednesday, Thursday, Friday
   ];
 
   // Options object defining the configuration of the chart
